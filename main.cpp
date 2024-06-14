@@ -9,6 +9,7 @@ void Privet()
 void WorkingOut()
 {
     cout << "Work those abs! Its no joke!" << endl;
+    cout << "Or dont. I do not really care." << endl;
 }
 
 int main()
