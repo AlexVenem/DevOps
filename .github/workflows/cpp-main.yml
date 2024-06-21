@@ -42,6 +42,6 @@
              with: 
               upload_url: ${{ steps.create_release.outputs.upload_url }}
               asset_name: cmake-main-latest
-              asset_path: ./build/cmake-main
+              asset_path: ./build/main
               asset_content_type: application/octet-stream
            
