@@ -16,11 +16,11 @@
            - name: Configure and build
              run: |
                 cmake -B bin .
-                cmake --build build --config Release
+                cmake --build bin --config Release
 
            - name: Tests
              run: 
-                ctest --test-dir build -V
+                ctest --test-dir bin -V
 
            - name: create Release
              id: create_release
