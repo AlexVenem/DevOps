@@ -16,7 +16,7 @@
            - name: Configure and build
              run: |
                 cmake -B bin .
-                cmake --build bin --config Release
+                cmake --build build --config Release
 
            - name: Tests
              run: 
