@@ -55,6 +55,6 @@
       
            - name: Build and push Docker image
              run: |
-              docker build -t ${{ secrets.DOCKER_USERNAME }}/gradient-descent:latest .
-              docker push ${{ secrets.DOCKER_USERNAME }}/gradient-descent:latest
+              docker build -t ${{ secrets.DOCKER_USERNAME }}/cmake-main:latest .
+              docker push ${{ secrets.DOCKER_USERNAME }}/cmake-main:latest
            
