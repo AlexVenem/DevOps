@@ -1,0 +1,38 @@
+    name: CI workflow
+
+    on:
+        push:
+          branches: [ "main" ]
+        pull_request:
+          branches: [ "main" ]
+
+    jobs:
+        build_project:
+          runs-on: ubuntu-latest
+          steps:
+           - name: Get repository code
+             uses: actions/checkout@v4
+      
+           - name: Configure and build
+             run: |
+                cmake -B bin .
+                cmake --build bin --config Release
+
+           - name: Tests
+             run: 
+                ctest --test-dir bin -V
+
+           - name: create Release
+             id: create_release
+             uses: actions/create-release@v1
+             env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+             with:
+               tag_name: ${{ github.run_number  }}
+               release_name: Release ${{ github.run_number  }}
+               body: |
+                Auto release for the version ${{ github.run_number }}
+               prerelease: true
+               draft: false
+
+           
