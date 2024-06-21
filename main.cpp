@@ -16,5 +16,6 @@ void WorkingOut()
 int main()
 {
     Privet();
+    WorkingOut();
     return 0;
 }
