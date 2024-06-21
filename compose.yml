@@ -3,6 +3,6 @@ services:
     image: cmake-main
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: DockerFile
     ports: 
       - "8089:8089"
