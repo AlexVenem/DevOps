@@ -6,7 +6,7 @@ project(cmake-main)
 
 add_executable(cmake-main main.cpp)
 
-install(TARGETS main)
+install(TARGETS cmake-main)
 
 enable_testing()
 add_test(NAME cmake-main COMMAND main)
